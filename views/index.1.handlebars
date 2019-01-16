@@ -1,0 +1,119 @@
+<!-- First Parallax Section -->
+<div class="jumbotron paral paralsec">
+  <h1 class="display-3">Here is a heading 1</h1>
+  <p class="lead">Here is a short description 1</p>
+  <p class="lead">
+    <a class="btn btn-info btn-lg btn-md" href="#" role="button">Here is a button 1</a>
+  </p>
+</div>
+
+<!-- Second Parallax Section -->
+<div class="jumbotron paral paralsec1">
+  <h1 class="display-3">Here is a heading 2</h1>
+  <p class="lead">Here is a short description 2</p>
+  <p class="lead">
+    <a class="btn btn-warning btn-lg btn-md" href="widgets.html" role="button">Here is a button 2</a>
+  </p>
+</div>
+
+<!-- Third Parallax Section -->
+<div class="jumbotron paral paralsec2">
+  <h1 class="display-3">Here is a heading 3</h1>
+  <p class="lead">Here is a short description 2</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg btn-md" href="themes.html" role="button">Here is a button 3</a>
+  </p>
+</div>
+
+<!-- Add More Parallax Sections Here -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h2>Sistema de Reservaciones</h2>
+      <form class="login" method="post" action="/api/login">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Correo</label>
+          <input type="email" class="form-control" name="email" id="email-input" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" name="password" id="password-input" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+      <br />
+
+    </div>
+  </div>
+  {{#if error}}
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="alert alert-danger">{{error}}</div>
+    </div>
+  </div>
+  {{/if}}
+  {{#if success}}
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="alert alert-success">{{success}}</div>
+    </div>
+  </div>
+  {{/if}}
+  <div>
+    <a href="#" data-toggle="modal" data-target="#exampleModal">Olvide Contraseña</a>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Restablecer Contraseña</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12">
+              <form action="/forgot" method="POST">
+                <legend>Olvide Contraseña</legend>
+                <div class="form-group">
+                  <label for="email">Correo</label>
+                  <input type="email" name="email" autofocus class="form-control">
+                </div>
+                <div class="form-group">
+                  <input type="submit" class="btn btn-primary" value="Restablecer Contraseña">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+ <!-- Footer Section -->
+  <footer class="wn-footer">
+    <p>This is a Bootstrap 4 parallax page with jumbotron created by <a href="https://www.webnots.com/">WebNots Web
+        Consulting Services</a></p>
+    <p>
+      <a href="#">Back to top</a>
+    </p>
+  </footer>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.21/moment-timezone.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.21/moment-timezone-with-data-2012-2022.min.js"></script>
