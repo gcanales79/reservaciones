@@ -16,11 +16,11 @@
     "logging": false
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL",
-    "timezone": "-05:00",
-    "dialectOptions": {
-      "useUTC": false
-    },
+    "username": "root",
+    "password": "Cugaleno26",
+    "database": "netzwerkdb",
+    "host": "127.0.0.1",
+    "port":3306,
     "dialect": "mysql"
   }
 }
