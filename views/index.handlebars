@@ -1,4 +1,3 @@
-
 <section class="wn-section wn-section-hero wn-section-full header4 wn-section-with-arrow wn-after-navbar" id="header4-d"
   style="background-color: rgb(44, 62, 80);">
 
@@ -15,8 +14,7 @@
 
           <h1 class="wn-section-title display-1">Soluciones Digitales Para Impulsar Tu Negocio</h1>
 
-          <div class="wn-section-btn"><a class="btn btn-lg btn-success" href="#"
-              target="_blank">LOGIN</a></div>
+          <div class="wn-section-btn"><a class="btn btn-lg btn-success" href="#" target="_blank">LOGIN</a></div>
 
           <div class="wn-figure image-size" style="width: 90%; font-size: 225px;"><img src="./images/header4.png"></div>
         </div>
@@ -54,7 +52,7 @@
               <div class="card-img iconbox"><img src="./images/01.jpg" class="features-img"></div>
               <div class="card-block text-xs-center">
                 <h5 class="wn-section-subtitle lead">sistema de reservaciones&nbsp;</h5>
-                <p class="wn-section-text lead">Nuestra solución te permitira atender a tus clientes 24/7. 
+                <p class="wn-section-text lead">Nuestra solución te permitira atender a tus clientes 24/7.
                   Ten una asistente virtual para administrar tu agenda.
                 </p>
 
@@ -70,7 +68,8 @@
               <div class="card-img iconbox"><img src="./images/02.jpg" class="features-img"></div>
               <div class="card-block text-xs-center">
                 <h5 class="wn-section-subtitle lead">monitoreo de produccion</h5>
-                <p class="wn-section-text lead">Tener una medición en tiempo real de tus procesos. Notificaciones al instante
+                <p class="wn-section-text lead">Tener una medición en tiempo real de tus procesos. Notificaciones al
+                  instante
                   de los eventos significativos.
                 </p>
 
@@ -362,21 +361,21 @@
         <div class="container">
           <div class="row">
             <div class="col-xs-12">
-              <h3 class="wn-section-title display-4 wn-editable-content">See What Our Customer Says</h3>
+              <h3 class="wn-section-title display-4 wn-editable-content">Lo Que Nuestros Clientes Dicen</h3>
             </div>
           </div>
         </div>
       </section>
       <div class="row card card-testimonial">
         <div class="col-xs-12 col-md-6 padding-left-0 padding-right-0 mediaEl">
-          <div class="wn-figure" style="background-image: url(./images/wn-2-2000x1333.jpg);"></div>
+          <div class="wn-figure" style="background-image: url(./images/logo_urban.jpg);"></div>
         </div>
         <div class="col-xs-12 col-md-6 text-xs-left content">
-          <p class="wn-section-text lead wn-editable-content">"It was a very nice experience working with Colorful
-            theme. It is easy to edit and i made my site in minutes. You can download it for free and start building
-            your own site."</p>
-          <h5 class="wn-section-title lead title wn-editable-content">Useful User and Owner</h5>
-          <h6 class="subtitle wn-editable-content">Site Owner Running An Awesome Site with Colorful Theme</h6>
+          <p class="wn-section-text lead wn-editable-content">"Fue una grata experiencia trabajar con Netzwerk.
+            Nos hicieron un sistema que permitia a nuestras socias saber que horarios teniamos disponibles, reservar
+            y cancelar clases desde su dispositivo movil."</p>
+          <h5 class="wn-section-title lead title wn-editable-content">Urbantree Pilates</h5>
+          <!--h6 class="subtitle wn-editable-content">Negocio de Pilates</h6-->
         </div>
       </div>
     </div>
@@ -389,14 +388,16 @@
     <div class="row">
       <div class="col-xs-12 col-lg-10 col-lg-offset-1 text-xs-center">
         <div class="col-xs-12 col-lg-6">
-          <p class="wn-section-subtitle lead">Contratanos, deja tus preocupaciones a nosotros y ten un respiro. Construye tu nuevo proyecto con nosotros!!!
-            </p>
+          <p class="wn-section-subtitle lead">Contratanos, deja tus preocupaciones a nosotros y ten un respiro.
+            Construye tu nuevo proyecto con nosotros!!!
+          </p>
           <h1 class="wn-section-title display-4">FORMA DE CONTACTO</h1>
-          <p class="wn-section-text lead">Nosotros te ayudamos en toda clase de desarrollo web. Explicanos tu problematica y alguien de nuestro
+          <p class="wn-section-text lead">Nosotros te ayudamos en toda clase de desarrollo web. Explicanos tu
+            problematica y alguien de nuestro
             equipo se pondra en contacto contigo.</p>
         </div>
         <div class="col-xs-12 col-lg-6" data-form-type="">
-          <form action="#" method="post">
+          <form action="/contacto" method="post">
             <div class="row row-sm-offset">
               <div class="col-xs-12 col-md-4">
                 <div class="form-group">
@@ -430,7 +431,9 @@
               <label class="form-control-label" for="form2-k-message">Mensaje</label>
               <textarea class="form-control" name="message" rows="7" data-form-field="Message" placeholder="Mensaje" id="form2-k-message"></textarea>
             </div>
-
+            {{#if success}}
+            <div class="alert alert-success">{{success}}</div>
+            {{/if}}
             <div class="text-lg-left text-xs-center"><button type="submit" class="btn btn-success">CONTACTANOS</button></div>
 
           </form>
@@ -536,6 +539,7 @@
 <script src="./js/jquery.touchSwipe.min.js"></script>
 <script src="./js/jarallax.js"></script>
 <script src="./js/script.js"></script>
+<script src="./js/index.js"></script>
 <input name="animation" type="hidden">
 <div id="scrollToTop" class="scrollToTop wn-arrow-up"><a style="text-align: center;"><span class="wn-arrow-up-icon fa fa-arrow-up"></span></a></div>
 

@@ -123,12 +123,12 @@ module.exports = function (app) {
         var smtpTransport = nodemailer.createTransport({
           service: 'Gmail',
           auth: {
-            type:"OAuth2",
+            type: "OAuth2",
             user: 'netzwerk.mty@gmail.com',
-            clientId:process.env.clientId,
-            clientSecret:process.env.clientSecret,
-            refreshToken:process.env.refreshToken,
-            accessToken:process.env.accessToken
+            clientId: process.env.clientId,
+            clientSecret: process.env.clientSecret,
+            refreshToken: process.env.refreshToken,
+            accessToken: process.env.accessToken
           }
         });
         var mailOptions = {
@@ -182,7 +182,7 @@ module.exports = function (app) {
                   where: {
                     resetPasswordToken: req.params.token
                   },
-                  individualHooks:true
+                  individualHooks: true
                 }).then(function (data, err) {
                   done(err, user)
                 })
@@ -192,8 +192,8 @@ module.exports = function (app) {
               return res.redirect("back")
             }
           }
-          else{
-            req.flash("error","La contraseña debe tener minimo 5 caracteres")
+          else {
+            req.flash("error", "La contraseña debe tener minimo 5 caracteres")
             return res.redirect("back")
           }
 
@@ -203,12 +203,12 @@ module.exports = function (app) {
         var smtpTransport = nodemailer.createTransport({
           service: 'Gmail',
           auth: {
-            type:"OAuth2",
+            type: "OAuth2",
             user: 'netzwerk.mty@gmail.com',
-            clientId:process.env.clientId,
-            clientSecret:process.env.clientSecret,
-            refreshToken:process.env.refreshToken,
-            accessToken:process.env.accessToken
+            clientId: process.env.clientId,
+            clientSecret: process.env.clientSecret,
+            refreshToken: process.env.refreshToken,
+            accessToken: process.env.accessToken
           }
         });
         var mailOptions = {
@@ -227,6 +227,38 @@ module.exports = function (app) {
       res.redirect('/');
     });
   });
+
+  app.post("/contacto", function (req, res) {
+
+    var smtpTransport = nodemailer.createTransport({
+      service: 'Gmail',
+      auth: {
+        type: "OAuth2",
+        user: 'netzwerk.mty@gmail.com',
+        clientId: process.env.clientId,
+        clientSecret: process.env.clientSecret,
+        refreshToken: process.env.refreshToken,
+        accessToken: process.env.accessToken
+      }
+    });
+    var mailOptions = {
+      to: "netzwerk.mty@gmail.com",
+      from: 'netzwerk.mty@gmail.com',
+      subject: 'Contacto',
+      text: "Una persona a pedido informacion \n\n " +
+        "Correo: " + req.body.email + "\n" +
+        "Telefono: " + req.body.phone + "\n" +
+        "Nombre: " + req.body.name + "\n" +
+        "Mensaje: " + req.body.message
+    };
+    smtpTransport.sendMail(mailOptions, function (err) {
+      req.flash('success', "Pronto nos pondremos en contacto contigo")
+      res.redirect("/")
+    });
+
+
+
+  })
 
 
 
