@@ -22,7 +22,7 @@ module.exports = function (app) {
 
 
     if (req.user.role === "produccion" || req.user.role === "admin") {
-      res.redirect("/produccion");
+      res.redirect("/inicio");
     }
     if (req.user.role === "inspector") {
       res.redirect("/gp12")

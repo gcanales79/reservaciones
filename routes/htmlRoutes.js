@@ -5,7 +5,7 @@ module.exports = function (app) {
   // Load index page
   app.get("/", function (req, res) {
     res.status(200);
-    console.log(req.flash("message"))
+    //console.log(req.flash("message"))
     
         res.render("index", {
           title: "home",
@@ -16,6 +16,21 @@ module.exports = function (app) {
     
 
   });
+
+  //Get home page
+  app.get("/inicio",isAuthenticated,function(req,res){
+    if(req.user.role==="admin"){
+      res.status(200);
+      res.render("inicio",{
+        active_admin: {
+          Register:true,
+        }
+      })
+    }
+    else{
+      res.render("404")
+    }
+  })
 
 
   //Get produccion page
